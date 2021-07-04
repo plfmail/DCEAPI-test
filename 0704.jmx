@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">10.6.135.191</stringProp>
+        <stringProp name="HTTPSampler.port">443</stringProp>
+        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.implementation">Java</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="Referer" elementType="Header">
+            <stringProp name="Header.name">Referer</stringProp>
+            <stringProp name="Header.value">http://10.6.135.191/</stringProp>
+          </elementProp>
+          <elementProp name="X-DCE-TENANT" elementType="Header">
+            <stringProp name="Header.name">X-DCE-TENANT</stringProp>
+            <stringProp name="Header.value">default</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Language" elementType="Header">
+            <stringProp name="Header.name">Accept-Language</stringProp>
+            <stringProp name="Header.value">zh-CN,zh;q=0.9</stringProp>
+          </elementProp>
+          <elementProp name="Origin" elementType="Header">
+            <stringProp name="Header.name">Origin</stringProp>
+            <stringProp name="Header.value">http://10.6.135.191</stringProp>
+          </elementProp>
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+          </elementProp>
+          <elementProp name="X-DCE-CLUSTER" elementType="Header">
+            <stringProp name="Header.name">X-DCE-CLUSTER</stringProp>
+            <stringProp name="Header.value">74263442-A657-5807-E641-28EADBC9799C</stringProp>
+          </elementProp>
+          <elementProp name="Content-Type" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+          </elementProp>
+          <elementProp name="X-DCE-Access-Token" elementType="Header">
+            <stringProp name="Header.name">X-DCE-Access-Token</stringProp>
+            <stringProp name="Header.value">eyJhbGciOiJIUzI1NiIsImV4cCI6MTYyNzk3OTQzMiwiaWF0IjoxNjI1Mzg3NDMyfQ.eyJ1c2VybmFtZSI6ImFkbWluIiwidG9rZW5faWQiOiI2YjQ1Y2I3MS01NzM5LTRhMzAtOGU3ZC1jYmExYzRmMjQ1MDQifQ.ysF1Fj7uC17EaDiXZDoT4m8rGHBmf65a0P574l4pdOU</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Encoding" elementType="Header">
+            <stringProp name="Header.name">Accept-Encoding</stringProp>
+            <stringProp name="Header.value">gzip, deflate</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组135.7" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1542614538000</longProp>
+        <longProp name="ThreadGroup.end_time">1542614538000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="412 /dce/apps" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;metadata&quot;:{&quot;name&quot;:&quot;${__Random(100000,1000000000000,)}&quot;,&quot;namespace&quot;:&quot;default&quot;},&quot;spec&quot;:{&quot;selector&quot;:{&quot;matchLabels&quot;:{&quot;dce.daocloud.io/app&quot;:&quot;dao1-2048&quot;}}}}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/dce/apps</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="apps" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;items&quot;:[{&quot;status&quot;:{&quot;statefulsetsStatus&quot;:[],&quot;warnings&quot;:[],&quot;deploymentsStatus&quot;:[],&quot;link&quot;:&quot;&quot;,&quot;daemonsetsStatus&quot;:[],&quot;resources&quot;:{}},&quot;kind&quot;:&quot;App&quot;,&quot;spec&quot;:{&quot;links&quot;:[],&quot;selector&quot;:{&quot;matchLabels&quot;:{&quot;dce.daocloud.io\/app&quot;:&quot;app128712041&quot;}}},&quot;apiVersion&quot;:&quot;dce.daocloud.io\/v1beta1&quot;,&quot;metadata&quot;:{&quot;namespace&quot;:&quot;default&quot;,&quot;creationTimestamp&quot;:&quot;2021-06-30T08:07:46Z&quot;,&quot;name&quot;:&quot;app128712041&quot;,&quot;annotations&quot;:{}}},{&quot;status&quot;:{&quot;statefulsetsStatus&quot;:[],&quot;warnings&quot;:[],&quot;deploymentsStatus&quot;:[],&quot;link&quot;:&quot;&quot;,&quot;daemonsetsStatus&quot;:[],&quot;resources&quot;:{}},&quot;kind&quot;:&quot;App&quot;,&quot;spec&quot;:{&quot;links&quot;:[],&quot;selector&quot;:{&quot;matchLabels&quot;:{&quot;dce.daocloud.io\/app&quot;:&quot;app425100824&quot;}}},&quot;apiVersion&quot;:&quot;dce.daocloud.io\/v1beta1&quot;,&quot;metadata&quot;:{&quot;namespace&quot;:&quot;default&quot;,&quot;creationTimestamp&quot;:&quot;2021-07-02T09:15:54Z&quot;,&quot;name&quot;:&quot;app425100824&quot;,&quot;annotations&quot;:{}}},{&quot;status&quot;:{&quot;statefulsetsStatus&quot;:[],&quot;warnings&quot;:[],&quot;deploymentsStatus&quot;:[],&quot;link&quot;:&quot;&quot;,&quot;daemonsetsStatus&quot;:[],&quot;resources&quot;:{}},&quot;kind&quot;:&quot;App&quot;,&quot;spec&quot;:{&quot;links&quot;:[],&quot;selector&quot;:{&quot;matchLabels&quot;:{&quot;dce.daocloud.io\/app&quot;:&quot;app588833599&quot;}}},&quot;apiVersion&quot;:&quot;dce.daocloud.io\/v1beta1&quot;,&quot;metadata&quot;:{&quot;namespace&quot;:&quot;default&quot;,&quot;creationTimestamp&quot;:&quot;2021-06-30T06:43:36Z&quot;,&quot;name&quot;:&quot;app588833599&quot;,&quot;annotations&quot;:{}}},{&quot;status&quot;:{&quot;statefulsetsStatus&quot;:[],&quot;warnings&quot;:[],&quot;deploymentsStatus&quot;:[],&quot;link&quot;:&quot;&quot;,&quot;daemonsetsStatus&quot;:[],&quot;resources&quot;:{}},&quot;kind&quot;:&quot;App&quot;,&quot;spec&quot;:{&quot;links&quot;:[],&quot;selector&quot;:{&quot;matchLabels&quot;:{&quot;dce.daocloud.io\/app&quot;:&quot;app741957922&quot;}}},&quot;apiVersion&quot;:&quot;dce.daocloud.io\/v1beta1&quot;,&quot;metadata&quot;:{&quot;namespace&quot;:&quot;default&quot;,&quot;creationTimestamp&quot;:&quot;2021-06-30T08:06:07Z&quot;,&quot;name&quot;:&quot;app741957922&quot;,&quot;annotations&quot;:{}}},{&quot;status&quot;:{&quot;statefulsetsStatus&quot;:[],&quot;warnings&quot;:[],&quot;deploymentsStatus&quot;:[],&quot;link&quot;:&quot;&quot;,&quot;daemonsetsStatus&quot;:[],&quot;resources&quot;:{}},&quot;kind&quot;:&quot;App&quot;,&quot;spec&quot;:{&quot;links&quot;:[],&quot;selector&quot;:{&quot;matchLabels&quot;:{&quot;dce.daocloud.io\/app&quot;:&quot;app834698251&quot;}}},&quot;apiVersion&quot;:&quot;dce.daocloud.io\/v1beta1&quot;,&quot;metadata&quot;:{&quot;namespace&quot;:&quot;default&quot;,&quot;creationTimestamp&quot;:&quot;2021-06-30T06:43:35Z&quot;,&quot;name&quot;:&quot;app834698251&quot;,&quot;annotations&quot;:{}}},{&quot;status&quot;:{&quot;statefulsetsStatus&quot;:[],&quot;warnings&quot;:[],&quot;deploymentsStatus&quot;:[],&quot;link&quot;:&quot;&quot;,&quot;daemonsetsStatus&quot;:[],&quot;resources&quot;:{}},&quot;kind&quot;:&quot;App&quot;,&quot;spec&quot;:{&quot;links&quot;:[],&quot;selector&quot;:{&quot;matchLabels&quot;:{&quot;dce.daocloud.io\/app&quot;:&quot;app949834656&quot;}}},&quot;apiVersion&quot;:&quot;dce.daocloud.io\/v1beta1&quot;,&quot;metadata&quot;:{&quot;namespace&quot;:&quot;default&quot;,&quot;creationTimestamp&quot;:&quot;2021-06-30T08:06:06Z&quot;,&quot;name&quot;:&quot;app949834656&quot;,&quot;annotations&quot;:{}}},{&quot;status&quot;:{&quot;statefulsetsStatus&quot;:[],&quot;warnings&quot;:[],&quot;deploymentsStatus&quot;:[],&quot;link&quot;:&quot;&quot;,&quot;daemonsetsStatus&quot;:[],&quot;resources&quot;:{}},&quot;kind&quot;:&quot;App&quot;,&quot;spec&quot;:{&quot;links&quot;:[],&quot;selector&quot;:{&quot;matchLabels&quot;:{&quot;dce.daocloud.io\/app&quot;:&quot;app995710164&quot;}}},&quot;apiVersion&quot;:&quot;dce.daocloud.io\/v1beta1&quot;,&quot;metadata&quot;:{&quot;namespace&quot;:&quot;default&quot;,&quot;creationTimestamp&quot;:&quot;2021-07-02T09:21:14Z&quot;,&quot;name&quot;:&quot;app995710164&quot;,&quot;annotations&quot;:{}}},{&quot;status&quot;:{&quot;statefulsetsStatus&quot;:[],&quot;warnings&quot;:[],&quot;deploymentsStatus&quot;:[{&quot;current&quot;:1,&quot;desired&quot;:1,&quot;running&quot;:1,&quot;deploymentName&quot;:&quot;dao-2048-dao-2048&quot;,&quot;resources&quot;:{&quot;requests&quot;:{&quot;cpu&quot;:&quot;64m&quot;,&quot;memory&quot;:&quot;268435456&quot;},&quot;limits&quot;:{&quot;cpu&quot;:&quot;128m&quot;,&quot;memory&quot;:&quot;268435456&quot;}}}],&quot;link&quot;:&quot;&quot;,&quot;daemonsetsStatus&quot;:[],&quot;resources&quot;:{&quot;requests&quot;:{&quot;cpu&quot;:&quot;64m&quot;,&quot;memory&quot;:&quot;268435456&quot;},&quot;limits&quot;:{&quot;cpu&quot;:&quot;128m&quot;,&quot;memory&quot;:&quot;268435456&quot;}}},&quot;kind&quot;:&quot;App&quot;,&quot;spec&quot;:{&quot;links&quot;:[],&quot;selector&quot;:{&quot;matchLabels&quot;:{&quot;dce.daocloud.io\/app&quot;:&quot;dao-2048&quot;}}},&quot;apiVersion&quot;:&quot;dce.daocloud.io\/v1beta1&quot;,&quot;metadata&quot;:{&quot;namespace&quot;:&quot;default&quot;,&quot;creationTimestamp&quot;:&quot;2021-06-29T10:10:30Z&quot;,&quot;name&quot;:&quot;dao-2048&quot;,&quot;annotations&quot;:{}}},{&quot;status&quot;:{&quot;statefulsetsStatus&quot;:[],&quot;warnings&quot;:[],&quot;deploymentsStatus&quot;:[{&quot;current&quot;:1,&quot;desired&quot;:1,&quot;running&quot;:1,&quot;deploymentName&quot;:&quot;plf2048-dao-2048&quot;,&quot;resources&quot;:{&quot;requests&quot;:{&quot;cpu&quot;:&quot;50m&quot;,&quot;memory&quot;:&quot;50M&quot;},&quot;limits&quot;:{&quot;cpu&quot;:&quot;50m&quot;,&quot;memory&quot;:&quot;50M&quot;}}}],&quot;link&quot;:&quot;&quot;,&quot;daemonsetsStatus&quot;:[],&quot;resources&quot;:{&quot;requests&quot;:{&quot;cpu&quot;:&quot;50m&quot;,&quot;memory&quot;:&quot;50M&quot;},&quot;limits&quot;:{&quot;cpu&quot;:&quot;50m&quot;,&quot;memory&quot;:&quot;50M&quot;}}},&quot;kind&quot;:&quot;App&quot;,&quot;spec&quot;:{&quot;links&quot;:[],&quot;selector&quot;:{&quot;matchLabels&quot;:{&quot;dce.daocloud.io\/app&quot;:&quot;plf2048&quot;}}},&quot;apiVersion&quot;:&quot;dce.daocloud.io\/v1beta1&quot;,&quot;metadata&quot;:{&quot;namespace&quot;:&quot;default&quot;,&quot;creationTimestamp&quot;:&quot;2021-06-30T04:40:59Z&quot;,&quot;name&quot;:&quot;plf2048&quot;,&quot;annotations&quot;:{&quot;dce.daocloud.io\/chart&quot;:&quot;{\&quot;chart_name\&quot;: \&quot;dao-2048\&quot;, \&quot;chart_version\&quot;: \&quot;0.1.1\&quot;, \&quot;chart_namespace\&quot;: \&quot;stable\&quot;}&quot;}}}],&quot;kind&quot;:&quot;AppList&quot;,&quot;apiVersion&quot;:&quot;v1&quot;,&quot;metadata&quot;:{&quot;selfLink&quot;:&quot;\/apis\/dce.daocloud.io\/v1beta1\/namespaces\/default\/apps&quot;,&quot;resourceVersion&quot;:&quot;3146003&quot;}}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">10.6.135.191</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/dce/apps</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="聚合报告" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <boolProp name="saveHeaders">false</boolProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <BeanShellListener guiclass="TestBeanGUI" testclass="BeanShellListener" testname="BeanShell Listener" enabled="true">
+        <stringProp name="filename"></stringProp>
+        <stringProp name="parameters"></stringProp>
+        <boolProp name="resetInterpreter">false</boolProp>
+        <stringProp name="script"></stringProp>
+      </BeanShellListener>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
